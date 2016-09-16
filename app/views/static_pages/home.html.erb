@@ -8,26 +8,8 @@
     </h2>
   </a>
   <div class="nav-container">
-    <select class="metro-nav">
-      <option>All Type</option>
-      <option>AngularJS</option>
-      <option>NodeJS</option>
-      <option>ReactJS</option>
-      <option>Bootstrap</option>
-      <option>HTML & CSS</option>
-      <option>SemacticUI</option>
-    </select>
-    <select class="course-nav">
-      <option>All Courses</option>
-      <option>All Courses</option>
-      <option>All Courses</option>
-      <option>All Courses</option>
-      <option>All Courses</option>
-      <option>All Courses</option>
-      <option>All Courses</option>
-      <option>All Courses</option>
-      <option>All Courses</option>
-    </select>
+    <%= select("project", "category_id", Category.all.collect{|p| [p.name, p.id]}, class: "metro-nav") %>
+    <%= select("project", "user_id", User.all.collect{|p| [p.name, p.id]}, class: "course-nav") %>
   </div>
 </nav>
 <div class="container">
@@ -36,7 +18,7 @@
   <ul class="projects">
     <% 30.times do %>
       <li class="project">
-        <div class="project-image">
+        <div class="project-image" style="background: url('https://res.cloudinary.com/general-assembly-profiles/image/upload/c_crop,h_960,w_1280,x_0,y_0/v1473792423/jddlnteyzyekfyqbuiza.jpg');">
           <a href="#">
             <div class="course-mark"><b>AgJS</b></div>
           </a>
