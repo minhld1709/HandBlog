@@ -8,30 +8,30 @@
     </h2>
   </a>
   <div class="nav-container">
-    <%= select("project", "category_id", Category.all.collect{|p| [p.name, p.id]}, class: "metro-nav") %>
-    <%= select("project", "user_id", User.all.collect{|p| [p.name, p.id]}, class: "course-nav") %>
+    <%= select("project", "category_id", Category.all.collect{|p| [p.name, p.id]}, {prompt: "All Type"}, class: "metro-nav") %>
+    <%= select("project", "user_id", User.all.collect{|p| [p.name, p.id]}, {prompt: "All Auther"}, class: "course-nav") %>
   </div>
 </nav>
 <div class="container">
   <h1>MTeo Bloger</h1>
   <h2 class="slogan">Luon Luon dung len - luon luon huong den</h2>
   <ul class="projects">
-    <% 30.times do %>
+    <% @projects.each do |f| %>
       <li class="project">
-        <div class="project-image" style="background: url('https://res.cloudinary.com/general-assembly-profiles/image/upload/c_crop,h_960,w_1280,x_0,y_0/v1473792423/jddlnteyzyekfyqbuiza.jpg');">
+        <div class="project-image" style="background: url('<%= f.layout_img %>');">
           <a href="#">
-            <div class="course-mark"><b>AgJS</b></div>
+            <div class="course-mark"><b><%= f.category.short_name %></b></div>
           </a>
           <div class="description">
-            <p>Angular for Beginner</p>
-            <a href="#" target="_blank">View Project</a>
+            <p><%= f.description %></p>
+            <a href="<%= f.link %>" target="_blank">View Project</a>
           </div>
         </div>
         <h2 class="project-name">
-          <span class="name">AngularJS</span>
+          <span class="name"><%= f.name %></span>
           <a href="#" class="fa fa-comment-o comment"> 12314</a>
           <a href="#" class="fa fa-star favories"> 232</a>
-          <a class="user" href="#">by Le Dinh Minh</a>
+          <a class="user" href="#">by <%= f.user.name %></a>
         </h2>
       </li>
     <% end %>

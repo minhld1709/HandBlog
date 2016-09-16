@@ -1,16 +1,23 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Category.create name: "AngularJS", sort_name: "AJS"
-Category.create name: "NodeJS", sort_name: "NJS"
-Category.create name: "ReactJS", sort_name: "RJS"
-Category.create name: "Bootstrap Template", sort_name: "BT"
-Category.create name: "Only HTML & CSS", sort_name: "OHC"
-Category.create name: "SemanticUI Template", sort_name: "ST"
 
+puts "Create 6 Category!"
+Category.create name: "AngularJS", short_name: "AJS"
+Category.create name: "NodeJS", short_name: "NJS"
+Category.create name: "ReactJS", short_name: "RJS"
+Category.create name: "Bootstrap Template", short_name: "BT"
+Category.create name: "Only HTML & CSS", short_name: "OHC"
+Category.create name: "SemanticUI Template", short_name: "ST"
+
+puts "Create 2 User!"
 User.create name: "Le Dinh Minh", email: "ledinhminh@gmail.com", password: "123123123", password_confirmation: "123123123"
 User.create name: "Nguyen Thanh Tung", email: "tung@gmail.com", password: "123123123", password_confirmation: "123123123"
+
+puts "Create 20 Project"
+20.times{
+	Project.create user_id: rand(1..2), category_id: rand(1..6), name: Faker::Name.title[0..14], description: "Angular for Beginner", link: "#", layout_img: "#"
+}
+Project.update_all layout_img: "https://res.cloudinary.com/general-assembly-profiles/image/upload/c_crop,h_960,w_1280,x_0,y_0/v1473792423/jddlnteyzyekfyqbuiza.jpg"
+Project.update_all link: "https://www.google.com.vn/"
+
+puts "Finish Seed Data"
