@@ -1,4 +1,5 @@
 <%= stylesheet_link_tag "custom" %>
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 <!-- Nav Bar -->
 <nav>
   <!-- Brand -->
@@ -34,55 +35,25 @@
   <h1>MTeo Bloger</h1>
   <h2 class="slogan">Luon Luon dung len - luon luon huong den</h2>
   <ul class="projects">
-    <li class="project">
-      <div class="project-image"></div>
-      <h2 class="project-name">
-        <span class="name">AngularJS</span>
-        <a class="user" href="#">Le Dinh Minh</a>
-      </h2>
-    </li>
-    <li class="project">
-      <div class="project-image"></div>
-      <h2 class="project-name">
-        <span class="name">AngularJS</span>
-        <a class="user" href="#">Le Dinh Minh</a>
-      </h2>
-    </li>
-    <li class="project">
-      <div class="project-image"></div>
-      <h2 class="project-name">
-        <span class="name">AngularJS</span>
-        <a class="user" href="#">Le Dinh Minh</a>
-      </h2>
-    </li>
-    <li class="project">
-      <div class="project-image"></div>
-      <h2 class="project-name">
-        <span class="name">AngularJS</span>
-        <a class="user" href="#">Le Dinh Minh</a>
-      </h2>
-    </li>
-    <li class="project">
-      <div class="project-image"></div>
-      <h2 class="project-name">
-        <span class="name">AngularJS</span>
-        <a class="user" href="#">Le Dinh Minh</a>
-      </h2>
-    </li>
-    <li class="project">
-      <div class="project-image"></div>
-      <h2 class="project-name">
-        <span class="name">AngularJS</span>
-        <a class="user" href="#">Le Dinh Minh</a>
-      </h2>
-    </li>
-    <li class="project">
-      <div class="project-image"></div>
-      <h2 class="project-name">
-        <span class="name">AngularJS</span>
-        <a class="user" href="#">Le Dinh Minh</a>
-      </h2>
-    </li>
+    <% 30.times do %>
+      <li class="project">
+        <div class="project-image">
+          <a href="#">
+            <div class="course-mark"><b>AgJS</b></div>
+          </a>
+          <div class="description">
+            <p>Angular for Beginner</p>
+            <a href="#" target="_blank">View Project</a>
+          </div>
+        </div>
+        <h2 class="project-name">
+          <span class="name">AngularJS</span>
+          <a href="#" class="fa fa-comment-o comment"> 12314</a>
+          <a href="#" class="fa fa-star favories"> 232</a>
+          <a class="user" href="#">by Le Dinh Minh</a>
+        </h2>
+      </li>
+    <% end %>
   </ul>
 </div>
 
