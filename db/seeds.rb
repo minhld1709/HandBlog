@@ -20,4 +20,14 @@ puts "Create 20 Project"
 Project.update_all layout_img: "https://res.cloudinary.com/general-assembly-profiles/image/upload/c_crop,h_960,w_1280,x_0,y_0/v1473792423/jddlnteyzyekfyqbuiza.jpg"
 Project.update_all link: "https://www.google.com.vn/"
 
+puts "Create 40 Comment 1"
+40.times{
+	Comment.create project_id: rand(1..20), own_id: rand(1..2), content: Faker::Lorem.sentence
+}
+
+puts "Create 20 Comment 2"
+20.times{
+	Comment.create project_id: rand(1..20), own_id: rand(1..2), comment_id: rand(1..40), content: Faker::Lorem.sentence 
+}
+
 puts "Finish Seed Data"
