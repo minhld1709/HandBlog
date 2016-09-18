@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 20160916181228) do
   create_table "projects", force: :cascade do |t|
     t.integer  "user_id",     null: false
     t.integer  "category_id", null: false
-    t.text     "favories"
+    t.text     "factories"
     t.string   "name"
     t.string   "layout_img"
     t.string   "description"

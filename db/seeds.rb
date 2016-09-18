@@ -30,4 +30,12 @@ puts "Create 20 Comment 2!"
 	Comment.create project_id: rand(1..20), own_id: rand(1..2), cm_id: rand(1..40), content: Faker::Lorem.sentence
 }
 
+puts "Update favories"
+20.times do |n|
+	buffer = "";
+	rand(1..30).times{buffer += rand(1..100).to_s + " "}
+	buffer = buffer.split.uniq.join(" ")
+	Project.find(n+1).update factories: buffer;
+end
+
 puts "Finish Seed Data!"
