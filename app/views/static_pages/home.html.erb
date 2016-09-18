@@ -30,11 +30,10 @@
         <h2 class="project-name">
           <span class="name"><%= f.name %></span>
           <a href="#" class="fa fa-comment-o comment"> <%= f.comment.count %></a>
-          <a href="#" class="fa fa-star favories"> 232</a>
+          <a href="#" class="fa fa-star favories"> <%= get_count_favories(f) %></a>
           <a class="user" href="#">by <%= f.user.name %></a>
         </h2>
       </li>
     <% end %>
   </ul>
 </div>
-
