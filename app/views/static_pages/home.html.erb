@@ -12,6 +12,17 @@
     <%= select("project", "user_id", User.all.collect{|p| [p.name, p.id]}, {prompt: "All Auther"}, class: "course-nav") %>
   </div>
 </nav>
+
+<div class="my-nav">
+  <div class="dropdown">
+    <img src="http://s.pictub.club/2016/09/16/mrMvH.jpg">
+    <div class="dropdown-content">
+      <p>Profile</p>
+      <p>Logout</p>
+    </div>
+  </div>
+</div>
+
 <div class="container">
   <h1>MTeo Bloger</h1>
   <h2 class="slogan">Luon Luon dung len - luon luon huong den</h2>
