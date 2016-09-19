@@ -51,6 +51,22 @@ nav h2.brand .font-mini {
   border: 0;
   font-weight: 400;
 }
+.nav-container button {
+  float: right;
+  height: 45px;
+  width: 45px;
+  margin-left: 10px;
+  background: #bbb;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  font-size: 34px;
+  color: #555;
+  cursor: pointer;
+}
+.nav-container button:active {
+  background: #555;
+  color: white;
+}
 
 .container {
   position: relative;
@@ -221,6 +237,11 @@ ul.projects li.project {
   padding: 5px 13px;
 }
 
+.dropdown-content > p > a {
+  text-decoration: none;
+  color: #979797;
+}
+
 .dropdown-content > p:first-child {
   border-radius: 5px 5px 0 0;
 }
@@ -233,10 +254,14 @@ ul.projects li.project {
   margin-bottom: 0;
 }
 .dropdown-content > p:hover {
-  color: #fff;
   background: #555;
+}
+
+.dropdown-content > p:hover > a {
+  color: #fff;
 }
 
 .dropdown:hover .dropdown-content {
     display: block;
 }
+

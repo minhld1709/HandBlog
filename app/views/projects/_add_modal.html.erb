@@ -1,0 +1,36 @@
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times</span>
+      <h2>Modal Header</h2>
+    </div>
+    <div class="modal-body">
+      <%= form_for Project.new do |f| %>
+        <%= f.hidden_field :user_id, value: 1 %>
+        <label>Name</label>
+        <%= f.text_field :name %>
+        <br>
+        <label>Category</label>
+        <%= f.select :category_id, options_from_collection_for_select(Category.all, :id, :name) %>
+        <br>
+        <label>description</label>
+        <%= f.text_field :description %>
+        <br>
+        <label>Layout Project</label>
+        <%= f.text_field :layout_img %>
+        <br>
+        <label>Link Project</label>
+        <%= f.text_field :link %>
+        <br>
+        <%= f.submit "Create" %>
+      <% end %>
+    </div>
+    <div class="modal-footer">
+      <h3>Modal Footer</h3>
+    </div>
+  </div>
+</div>
+<%= stylesheet_link_tag "modal" %>
+<%= javascript_include_tag "modal" %>
