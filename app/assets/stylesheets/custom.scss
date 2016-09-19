@@ -205,26 +205,36 @@ ul.projects li.project {
   background-color: #f9f9f9;
   min-width: 65px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  padding: 10px 13px;
   border: 1px solid #eee;
   right: 0;
+  border-radius: 5px;
 }
 
 .dropdown-content > p {
   text-align: center;
   margin: 0;
-  margin-bottom: 5px;
   text-transform: uppercase;
   color: #979797;
   cursor: pointer;
   font-size: 14px;
   font-weight: 400;
+  padding: 5px 13px;
 }
+
+.dropdown-content > p:first-child {
+  border-radius: 5px 5px 0 0;
+}
+
+.dropdown-content > p:last-child {
+  border-radius: 0 0 5px 5px;
+}
+
 .dropdown-content > p:last-child {
   margin-bottom: 0;
 }
 .dropdown-content > p:hover {
-  color: #444;
+  color: #fff;
+  background: #555;
 }
 
 .dropdown:hover .dropdown-content {
