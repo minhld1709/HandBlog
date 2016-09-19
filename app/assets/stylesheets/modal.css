@@ -1,0 +1,86 @@
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 80;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color:rgba(0,0,0,0.4);
+  -webkit-animation-name: fadeIn;
+  -webkit-animation-duration: 0.4s;
+  animation-name: fadeIn;
+  animation-duration: 0.4s;
+}
+
+.modal-content {
+  position: fixed;
+  bottom: 0;
+  /*background-color: #fefefe;*/
+  background-color: white;
+  color: #333;
+  width: 80%;
+  margin: 0 10%;
+  margin-bottom: 30%;
+  -webkit-animation-name: slideIn;
+  -webkit-animation-duration: 0.4s;
+  animation-name: slideIn;
+  animation-duration: 0.4s;
+}
+
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  height: 31px;
+  width: 31px;
+  text-align: center;
+  color: #333;
+}
+
+.close:hover, .close:focus {
+  text-decoration:none;
+  cursor: pointer;
+  border: 1px solid #333;
+  background: #333;
+  color: white;
+  border-radius: 50%;
+}
+
+.modal-header {
+  padding: 25px 16px;
+  background-color: #eeeeee;
+}
+
+.modal-body {
+  padding: 2px 16px;
+}
+
+.modal-footer {
+  padding: 22px 16px;
+  background-color: #eeeeee;
+  color: #333;
+  font-size: 14px;
+}
+
+@-webkit-keyframes slideIn {
+  from {bottom: -300px; opacity: 0}
+  to {bottom: 0; opacity: 1}
+}
+
+@keyframes slideIn {
+  from {bottom: -300px; opacity: 0}
+  to {bottom: 0; opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+  from {opacity: 0}
+  to {opacity: 1}
+}
+
+@keyframes faceIn {
+  from {opacity: 0}
+  to {opacity: 1}
+}
