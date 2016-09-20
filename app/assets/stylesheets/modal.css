@@ -16,13 +16,11 @@
 
 .modal-content {
   position: fixed;
-  bottom: 0;
-  /*background-color: #fefefe;*/
+  top: 25%;
   background-color: white;
   color: #333;
   width: 80%;
   margin: 0 10%;
-  margin-bottom: 30%;
   -webkit-animation-name: slideIn;
   -webkit-animation-duration: 0.4s;
   animation-name: slideIn;
